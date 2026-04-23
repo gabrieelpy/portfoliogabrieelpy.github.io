@@ -1,49 +1,29 @@
 @charset "UTF-8";
 
-body{
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-    color: white;
-    padding: 30px;
-    font-size: 1.3em;
-    
-}
 
-p{
-    font-size: 1em;
-}
-
-h1, h2, h3{
-    color: red;
-}
-
-
-
-
-#name {
-    font-size: 1.5em;
-}
-
-#about{
-    height: 300px;
-    background-color: rgb(8, 8, 8);
+img{
     cursor: pointer;
     transition: transform 0.2s ease;
-    padding: 0px;
-    border-radius: 5px;
+    padding: 1%;
 }
-
-.project{
-    height: 180px;
-    width: 800px;
-    background-color: rgb(8, 8, 8);
+img:hover{
+    transform: scale(1.05);
+}
+body{
+    background-color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pts;
     text-align: center;
-    margin: auto;
-    display: flex;
-    gap: 15px;
 }
-
-.proj{
-    width: 50%;
+h1{
+    color:yellow;
+}
+h2{
+    color: white;
+}
+p{
+    color: brown;
+}
+li{
+    color: brown;
 }

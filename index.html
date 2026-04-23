@@ -3,60 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <title>Portal Grimaldi</title>
 </head>
 <body>
-    <header>
-    </header>
-    <br><br>
-    <section>
-       
-        <div id="bio">
-            <h1 style="color:white;">Olá — eu sou o <strong style="color: red;">Victor</strong></h1>
-            <p>Aqui você poderá encontrar um pouco sobre mim e <br>
-                sobre meus projetos desenvolvidos para estudos.
-            </p><br>
-        </div>
-        <div id="projects">
-            
-            <h2 style="text-align: center;">Projetos</h2>
-            <div class="project">
-                
-                <div class="proj">
-                    <a href="" style="text-decoration: none; color:white;"> <h3>Verificador Idade</h3><p style="font-size: 13pt;">Um projeto simples que identifica
-                        se você é maior ou menor de idade
-                    </p></a>
-                </div>
-                <div class="proj">
-                        <a href="" style="text-decoration: none; color:white;"> <h3>Portal Grimald</h3><p style="font-size: 13pt;">Uma página de nóticias
-                            simples
-                    </p></a>
-                </div>
-                
-            </div>
+    <div id="head" style="text-align: center;"></div>
+    <h1>Seja bem vindo ao Portal Grimaldi!</h1>
+    <h2>Qual máteria gostaria de ler hoje?</h2>
+    <div id="imagens">
+        <a href="materias/jornal1.html"><img src="data/banana.jpg" alt="banana" id="img1"></a>
+        <a href="materias/jornal2.html"><img src="data/sol.jpg" alt="sol" id="img2"></a>
+    </div>
+    <script>
+            var today = new Date()
+            var hour = today.getHours()
+            var minutes = today.getMinutes()
+            var day = today.getDay()
+            if (minutes <10){
+                minutes = "0" + minutes
+            }
+            var head = window.document.getElementById("head")
+            var strday = ""
+            if (hour >= 6 && hour <= 12){
+                head.innerHTML = "<h1>Bom dia!</h1>"
+            }else if (hour < 18){
+                head.innerHTML = "<h1>Boa tarde!</h1>"
+            }else{
+                head.innerHTML = "<h1>Boa noite</h1>"
+            }
+            switch(day){
+                case 0:
+                    strday = "Domingo"
+                    break
+                case 1:
+                    strday = "Segunda-feira"
+                    break
+                case 2:
+                    strday = "Terça-feira"
+                    break
+                case 3: 
+                    strday = "Quarta-feira"
+                    break
+                case 4:
+                    strday = "Quinta-feira"
+                    break
+                case 5:
+                    strday = "Sexta-feira"
+                    break
+                case 6:
+                    strday = "Sábado"
+                    break
+                default: 
+                    strday = "Unspected day!"
+                    break
+            }
+            head.innerHTML += `<h2>${strday}, ${today.getDate()}/${today.getMonth()}/${today.getFullYear()} ${hour}:${minutes} </h2> `
 
-        </div>
-        <hr style="background-color: rgb(141, 2, 2);color: rgb(141, 2, 2);border: none;height: 2px;">
-        <div id="about">
-            <h2>Sobre mim</h2>
-            <p>Meu nome é Victor Gabriel, eu tenho 16 anos e um grande sonho
-                de ser programador desde pequeno, me esforço todos os dias para conseguir realizar este sonho. </p>
-            <h2>Contato</h2>
-            <p>Email: victorbrito1008@gmail.com</p>
-            <p>Telefone: (75)99233-1204</p>
-        </div>
-        <hr style="background-color: rgb(141, 2, 2);color: rgb(141, 2, 2);border: none;height: 2px;">
-        <div id="socialmedia">
-            
-            <h2>Minhas redes sociais</h2>
-            <a href="https://www.youtube.com/@vitintech7" target="_blank"><img src="icone-youtube.png" alt="youtube-icon">/vitintech7</a>
-        
-        </div>
-    </section>
-    <footer>
-        <p style="font-size:14px;text-align:center;">Victor Gabriel, 2025 &copy;</p>
-    </footer>
-    <script src="main.js"></script>
+    </script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+    <ul>
+        <li>6 Benefícios incríveis da Banana para saúde física e mental <a href="materias/jornal1.html" target="_self" rel="next"> Leia aqui</a></li>
+        <li>A importância do sol para a nossa saúde <a href="materias/jornal2.html" target="_self" rel="next">Leia aqui</a></li>
+    </ul>
