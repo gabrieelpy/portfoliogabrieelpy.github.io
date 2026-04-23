@@ -26,7 +26,7 @@ h1, h2, h3{
 }
 
 #about{
-    height: 400px;
+    height:auto;
     background-color: rgb(8, 8, 8);
     cursor: pointer;
     transition: transform 0.2s ease;
